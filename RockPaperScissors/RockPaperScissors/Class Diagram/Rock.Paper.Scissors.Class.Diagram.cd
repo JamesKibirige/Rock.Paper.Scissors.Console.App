@@ -1,0 +1,239 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="RockPaperScissors.Application" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAgAAAAAAAEAAgAAAAAAAAAAgAAAAAAAAAAACAAI=</HashCode>
+      <FileName>Application.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="RockPaperScissors.ConsoleAdapter" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>ConsoleAdapter.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="RockPaperScissors.ConsoleInteractionController" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="9" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAEAIAAAAACAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ConsoleInteractionController.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="RockPaperScissors.Contest" Collapsed="true">
+    <Position X="2" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAQAAAAAAAACAAAAAAAIAAAAAgCAAAAAEAAA=</HashCode>
+      <FileName>Contest.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="RockPaperScissors.Game" Collapsed="true">
+    <Position X="3" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAgAAAAAAAAAA=</HashCode>
+      <FileName>Game.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RockPaperScissors.GameRules" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GameRules.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="RockPaperScissors.Match" Collapsed="true">
+    <Position X="0.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAhAAAAAAAAAAAAAAAAAgAABAAIAAAA=</HashCode>
+      <FileName>Match.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RockPaperScissors.Move" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="10.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>Move.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="RockPaperScissors.Score" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="9" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAgEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Score.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="RockPaperScissors.Properties.Resources" Collapsed="true">
+    <Position X="7.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAAAACAAAABEAAAAQAAAAAAAAAAAAAEAIA=</HashCode>
+      <FileName>Properties\Resources.Designer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RockPaperScissors.CompositionRoot.Program" Collapsed="true">
+    <Position X="5.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>CompositionRoot\Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RockPaperScissors.ContestResults.GameResult" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAIAAEAAEAAAAABAAAA=</HashCode>
+      <FileName>ContestResults\GameResult.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.207" Collapsed="true" />
+  </Class>
+  <Class Name="RockPaperScissors.ContestResults.MatchResult" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="9" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAgEAACAAAAAAAIAAAAAECAAAAAAAAA=</HashCode>
+      <FileName>ContestResults\MatchResult.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="RockPaperScissors.Players.HumanPlayer" Collapsed="true">
+    <Position X="0.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAA=</HashCode>
+      <FileName>Players\HumanPlayer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RockPaperScissors.Players.Player" Collapsed="true">
+    <Position X="2" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAgAA=</HashCode>
+      <FileName>Players\Player.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="RockPaperScissors.Players.RandomComputerPlayer" Collapsed="true">
+    <Position X="3" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAA=</HashCode>
+      <FileName>Players\RandomComputerPlayer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RockPaperScissors.Players.TacticalComputerPlayer" Collapsed="true">
+    <Position X="3" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAgAA=</HashCode>
+      <FileName>Players\TacticalComputerPlayer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RockPaperScissors.EnumEnumerator&lt;TEnum&gt;" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="10.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>EnumEnumerator.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Interface Name="RockPaperScissors.IPlayer" Collapsed="true">
+    <Position X="9" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAgAA=</HashCode>
+      <FileName>Interfaces\IPlayer.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="RockPaperScissors.Interfaces.IConsoleAdapter" Collapsed="true">
+    <Position X="5.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>Interfaces\IConsoleAdapter.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="RockPaperScissors.Interfaces.IContestResult" Collapsed="true">
+    <Position X="7.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAEAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IContestResult.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="RockPaperScissors.Interfaces.IGameRules" Collapsed="true">
+    <Position X="10.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IGameRules.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="RockPaperScissors.Interfaces.IMove" Collapsed="true">
+    <Position X="5.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>Interfaces\IMove.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="RockPaperScissors.Interfaces.IPlayable" Collapsed="true">
+    <Position X="7.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IPlayable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="RockPaperScissors.Interfaces.IRunnable" Collapsed="true">
+    <Position X="10.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>Interfaces\IRunnable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="RockPaperScissors.Interfaces.IScore" Collapsed="true">
+    <Position X="5.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAgEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IScore.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="RockPaperScissors.Interfaces.IUserInteraction" Collapsed="true">
+    <Position X="7.25" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAEAIAAAAACAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IUserInteraction.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="RockPaperScissors.Interfaces.IValidator" Collapsed="true">
+    <Position X="9" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IValidator.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="RockPaperScissors.Interfaces.IEnumEnumerator&lt;TEnum&gt;" Collapsed="true">
+    <Position X="9" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IEnumEnumerator.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="RockPaperScissors.Enums.ContestOutcome" Collapsed="true">
+    <Position X="5.5" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAAEAAAAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>Enums\ContestOutcome.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="RockPaperScissors.Enums.GameAction" Collapsed="true">
+    <Position X="7.25" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAAAAAEAAAAAAAAAAAAAAAAAgAAEAAAA=</HashCode>
+      <FileName>Enums\GameAction.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="RockPaperScissors.Enums.OpponentType" Collapsed="true">
+    <Position X="9" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAUCAAA=</HashCode>
+      <FileName>Enums\OpponentType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Calibri" Size="10" />
+</ClassDiagram>

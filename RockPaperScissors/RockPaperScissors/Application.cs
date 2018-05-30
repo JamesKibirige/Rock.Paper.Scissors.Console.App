@@ -62,6 +62,46 @@ namespace RockPaperScissors
         }
 
         /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        public IPlayer InitialisePlayer()
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        public IPlayer InitialiseOpponent()
+        {
+            //Request Opponent Type from User
+            //Request Input from User
+            //Validate User Input
+
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        public Contest InitialiseMatch()
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        public IContestResult PlayMatch()
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
         /// Run Method details the game pipeline, involves the sequence of events that govern the game
         /// </summary>
         public void Run()
@@ -71,29 +111,36 @@ namespace RockPaperScissors
             //do
             //{
             /*Enter Application Loop*/
-            //  Display Title Splash to the User: "“Rock, Paper, Scissors by James Kibirige”" -->>>Display Message to the User
+            //  Display Title Splash to the User: "“Rock, Paper, Scissors by James Kibirige”" -->>>Display Message to the User -- resource file
             //  Controller.Output(Title);
 
-            //  Request Opponent Type based on list of options- "Select Opponent Type" - The list of options could also be configurable --->>>Initialise Players -->>>User Input request
-            // var opponentType = Controller.RequestInput()
-            //  Validate Input: Try Parse opponentType to OpponentType enum
+            //  Request Human Player Details --->>>InitialisePlayer -->>>User Input request
+            //  var playerName = Controller.RequestInput() --->>>InitialisePlayer
 
-            //  Request Human Player Details --->>>Initialise Players -->>>User Input request
-            //  var playerName = Controller.RequestInput()
-            //  Request Match Length: "How many Games in a Match?" -->>>Set Number of Games -->>>User Input request
-            //  Validate Input: Between 1 and 7 Games
+            //  Request Opponent Type based on list of options --->>>InitialiseOpponent
+            //  "Select an Opponent Type from possible choices" - The list of options could also be configurable --->>>InitialiseOpponent-->>>User Input request -- 
+            //  var opponentType = Controller.RequestInput() --->>>InitialiseOpponent
+            //  Validate Input: Try Parse opponentType to OpponentType enum --->>>InitialiseOpponent
+            //  var opponent = InitialiseOpponent() 
+
+
+            //  Request Match Length: "Specify Number of Games To Play?" -->>>InitialiseMatch -->>>User Input request
+            //  var numRounds = Controller.RequestInput() -->>>InitialiseMatch
+            //  Validate Input: Between 1 and 7 Games -->>>Refactor later -->>>InitialiseMatch
+            //  Match = InitialiseMatch()
 
             /*Enter Match Loop*/
-            //var matchResult = Match.Play()
+            //var matchResult = Match.Play() -->>>PlayMatch()
 
             //  Display Match Result: -->>>Display Message to the User --MatchResult
             //  Controller.Output(matchResult.ToString());
 
             //  Prompt to ask if Player wants to play again - Do you want to play again? -->>>User Input request
-            //  Controller.RequestInput()
+            //  playagain = Controller.RequestInput()
             //  Validate Input
-            //  If Yes return to Application initialisation and play again --playagain = true;
-            //  If No - End and close application --break loop --playagain = false
+
+            //  If Yes return to Application initialisation and play again --playagain == true;
+            //  If No - End and close application --break loop --playagain == false
             // }while(playagain);
             throw new NotImplementedException();
         }

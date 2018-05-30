@@ -6,9 +6,9 @@
     public interface IValidator
     {
         /// <summary>
-        /// Validates and returns an input string based on regex, otherwise requests
+        /// Validates an input string using a regular expression
         /// </summary>
         /// <returns></returns>
-        string ValidateInput(string input, string regEx);
+        bool ValidateInput(string input, string regex);
     }
 }
