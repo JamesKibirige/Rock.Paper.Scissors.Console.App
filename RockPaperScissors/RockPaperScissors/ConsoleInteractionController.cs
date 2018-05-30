@@ -61,5 +61,22 @@ namespace RockPaperScissors
                 throw;
             }
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="validationMessage"></param>
+        /// <param name="validationExpression"></param>
+        /// <returns></returns>
+        public string RequestValidInput(string validationMessage, string validationExpression)
+        {
+            //do
+            //Request Valid Input from User
+            //Validate Users Input
+            //while input invalid
+
+            //return validated string
+            throw new NotImplementedException();
+        }
     }
 }

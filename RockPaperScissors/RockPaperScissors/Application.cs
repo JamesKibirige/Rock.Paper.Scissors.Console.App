@@ -67,6 +67,8 @@ namespace RockPaperScissors
         /// <returns></returns>
         public IPlayer InitialisePlayer()
         {
+            //  Request Human Player Details --->>>InitialisePlayer -->>>User Input request
+            //  var playerName = Controller.RequestInput() --->>>InitialisePlayer
             throw new NotImplementedException();
         }
 
@@ -76,9 +78,10 @@ namespace RockPaperScissors
         /// <returns></returns>
         public IPlayer InitialiseOpponent()
         {
-            //Request Opponent Type from User
-            //Request Input from User
-            //Validate User Input
+            //  Request Opponent Type based on list of options --->>>InitialiseOpponent
+            //  "Select an Opponent Type from possible choices" - The list of options could also be configurable --->>>InitialiseOpponent-->>>User Input request -- 
+            //  var opponentType = Controller.RequestInput() --->>>InitialiseOpponent
+            //  Validate Input: Try Parse opponentType to OpponentType enum --->>>InitialiseOpponent
 
             throw new NotImplementedException();
         }
@@ -89,6 +92,9 @@ namespace RockPaperScissors
         /// <returns></returns>
         public Contest InitialiseMatch()
         {
+            //  Request Match Length: "Specify Number of Games To Play?" -->>>InitialiseMatch -->>>User Input request
+            //  var numRounds = Controller.RequestInput() -->>>InitialiseMatch
+            //  Validate Input: Between 1 and 7 Games -->>>Refactor later -->>>InitialiseMatch
             throw new NotImplementedException();
         }
 
@@ -98,6 +104,7 @@ namespace RockPaperScissors
         /// <returns></returns>
         public IContestResult PlayMatch()
         {
+            //var matchResult = Match.Play() -->>>PlayMatch()
             throw new NotImplementedException();
         }
 

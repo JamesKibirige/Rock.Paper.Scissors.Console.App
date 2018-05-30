@@ -54,5 +54,37 @@ namespace RockPaperScissors.Test
             MockConsoleAdapter.Verify(m => m.WriteLine(requestText),Times.Once);
             MockConsoleAdapter.Verify(m => m.ReadLine(), Times.Once);
         }
+
+        [TestMethod]
+        public void RequestValidInput_RequestValidInputFromUser_UserEntersValidInput()
+        {
+            //Arrange
+            const string validationMessage = "Please Select Valid Input from Options";
+            const string validationExpression = "{Test1,Test2,Test3}";
+            const string expectedresult = "test1";
+
+            //Act
+            var result = ConsoleInteractionController.RequestValidInput(validationMessage, validationExpression);
+
+            //Assert
+            Assert.IsNotNull(result);
+            Assert.AreEqual(expectedresult, result);
+        }
+
+        [TestMethod]
+        public void RequestValidInput_RequestValidInputFromUserUserEntersInvalidInput_LoopsUnitValidInputProvided()
+        {
+            //Arrange
+            const string validationMessage = "Please Select Valid Input from Options";
+            const string validationExpression = "{Test1,Test2,Test3}";
+            const string expectedresult = "test2";
+
+            //Act
+            var result = ConsoleInteractionController.RequestValidInput(validationMessage, validationExpression);
+
+            //Assert
+            Assert.IsNotNull(result);
+            Assert.AreEqual(expectedresult, result);
+        }
     }
 }

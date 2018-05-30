@@ -1,14 +1,14 @@
 ﻿namespace RockPaperScissors.Interfaces
 {
     /// <summary>
-    /// 
+    /// Encapsulates Validation behaviours
     /// </summary>
     public interface IValidator
     {
         /// <summary>
-        /// Validates an input string using a regular expression
+        /// Request Valid Input from User, validates user input then loops if invalid, if valid returns a valid string. The Validation Expression constrains the user input
         /// </summary>
         /// <returns></returns>
-        bool ValidateInput(string input, string regex);
+        string RequestValidInput(string validationMessage, string validationExpression);
     }
 }

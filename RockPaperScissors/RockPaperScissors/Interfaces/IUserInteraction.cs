@@ -7,7 +7,7 @@ namespace RockPaperScissors.Interfaces
     /// The IUserInteraction interface encapsulates behaviour that deals with interacting with the User.
     /// Requests and messages can be passed between the Application and the User
     /// </summary>
-    public interface IUserInteraction
+    public interface IUserInteraction: IValidator
     {
         /// <summary>
         /// Console Adapter used to access and execute methods on the Console in an instance fashion to avoid direct Static
