@@ -9,7 +9,7 @@ using RockPaperScissors.Players;
 namespace RockPaperScissors.Test
 {
     [TestClass]
-    public class RandomComputerPlayerTests
+    public class RandomPlayerTests
     {
         /// <summary>
         /// The Player instance that we will be using to run our tests
@@ -34,7 +34,7 @@ namespace RockPaperScissors.Test
         [TestInitialize]
         public void SetUp()
         {
-            var playerName = "RandomComputerPlayer";
+            var playerName = "RandomPlayer";
 
             GameRulesMock = new Mock<IGameRules>();
             GameRulesMock.Setup(m => m.Rules).Returns(new Dictionary<GameAction, List<GameAction>>()
@@ -63,7 +63,7 @@ namespace RockPaperScissors.Test
 
             Rand = new Random();
 
-            thePlayer = new RandomComputerPlayer(playerName,GameRules, Rand);
+            thePlayer = new RandomPlayer(playerName,GameRules, Rand);
         }
 
         [DataTestMethod]
@@ -80,7 +80,7 @@ namespace RockPaperScissors.Test
             //Assert
             Assert.IsNotNull(result);
             Assert.IsInstanceOfType(result, typeof(Move));
-            Assert.AreEqual(result.Owner.Name, "RandomComputerPlayer");
+            Assert.AreEqual(result.Owner.Name, "RandomPlayer");
             Assert.IsTrue(validGameAction);
         }
     }

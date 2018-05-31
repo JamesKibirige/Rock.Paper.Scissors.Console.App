@@ -35,7 +35,7 @@ namespace RockPaperScissors.Players
         {
             bool validInput = false;
             GameAction playerAction;
-            var possibleActions = string.Join(",", Rules.PossibleGameActions().ToArray());//String literal listing possible game actions
+            var possibleActions = string.Join(",", Rules.PossibleGameActions());//String literal listing possible game actions
 
             do
             {

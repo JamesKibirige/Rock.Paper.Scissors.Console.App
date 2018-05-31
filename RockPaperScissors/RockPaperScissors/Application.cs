@@ -67,8 +67,16 @@ namespace RockPaperScissors
         /// <returns></returns>
         public IPlayer InitialisePlayer()
         {
-            //  Request Human Player Details --->>>InitialisePlayer -->>>User Input request
-            //  var playerName = Controller.RequestInput() --->>>InitialisePlayer
+            //  Request Human Player Details
+            //  var validationExpression = "A-Z,1-9"
+            //  var requestMessage = "Please Enter your name:\n"
+            //  var playerName = Controller.RequestInput(requestMessage)
+            //  Validate Input
+            //  if Input is Valid continue
+            //  else loop until user provides valid Input
+            //  var playerName = Controller.RequestValidInput(requestMessage,validationExpression)
+            //  var player = new HumanPlayer(playerName, Rules, InteractionController)
+            //  return Human Player
             throw new NotImplementedException();
         }
 
@@ -78,10 +86,18 @@ namespace RockPaperScissors
         /// <returns></returns>
         public IPlayer InitialiseOpponent()
         {
-            //  Request Opponent Type based on list of options --->>>InitialiseOpponent
-            //  "Select an Opponent Type from possible choices" - The list of options could also be configurable --->>>InitialiseOpponent-->>>User Input request -- 
-            //  var opponentType = Controller.RequestInput() --->>>InitialiseOpponent
-            //  Validate Input: Try Parse opponentType to OpponentType enum --->>>InitialiseOpponent
+            //Initialise Opponent
+            // Request Opponent Type based on list of options:
+            // var opponentTypeEnumerator = new EnumEnumerator<OpponentType>();
+            // var opponentTypeOptions = string.Join(",", opponentTypeEnumerator.EnumerateEnum());
+            // var requestMessage = $"Select an Opponent Type from possible the choices:\n\n{opponentTypeOptions}"
+            // var opponentType = Controller.RequestInput(requestMessage)
+            // Validate Input: IF IS NOT VALID loop 
+            //  var opponentType = Controller.RequestValidInput(requestMessage)
+            // Parse opponentType to OpponentType enum: Enum.TryParse(opponentType)
+            // Switch on OpponentType and instantiate appropriate Player
+            // IPlayer opponent = new HumanPlayer or IPlayer opponent = new HumanPlayer/RandomPlayer/TacticalPlayer()
+            //return opponent;
 
             throw new NotImplementedException();
         }
@@ -92,9 +108,15 @@ namespace RockPaperScissors
         /// <returns></returns>
         public Contest InitialiseMatch()
         {
-            //  Request Match Length: "Specify Number of Games To Play?" -->>>InitialiseMatch -->>>User Input request
-            //  var numRounds = Controller.RequestInput() -->>>InitialiseMatch
-            //  Validate Input: Between 1 and 7 Games -->>>Refactor later -->>>InitialiseMatch
+            //  var initMessage = "Initialising Match...\n\n"
+            //  Controller.Output(initMessage)
+            //  Request Match Length: "Specify Number of Games To Play?"
+            //  var requestMessage = "Specify Number of Games To Play?:\n"
+            //  var numRounds = Controller.RequestInput(requestMessage)
+            //  Validate Input: Between 1 and 7 Games: Int try parse
+            //  If invalid Loop until valid input: numRounds = (int)Controller.RequestValidInput(requestMessage)
+            //  var match = new Match(1,Players,NumRounds,Score,Controller,GameResults,Rounds)
+            //  return match
             throw new NotImplementedException();
         }
 
@@ -104,7 +126,7 @@ namespace RockPaperScissors
         /// <returns></returns>
         public IContestResult PlayMatch()
         {
-            //var matchResult = Match.Play() -->>>PlayMatch()
+            //var matchResult = Match.Play()
             throw new NotImplementedException();
         }
 
@@ -121,25 +143,17 @@ namespace RockPaperScissors
             //  Display Title Splash to the User: "“Rock, Paper, Scissors by James Kibirige”" -->>>Display Message to the User -- resource file
             //  Controller.Output(Title);
 
-            //  Request Human Player Details --->>>InitialisePlayer -->>>User Input request
-            //  var playerName = Controller.RequestInput() --->>>InitialisePlayer
+            //  InitialisePlayer()
 
-            //  Request Opponent Type based on list of options --->>>InitialiseOpponent
-            //  "Select an Opponent Type from possible choices" - The list of options could also be configurable --->>>InitialiseOpponent-->>>User Input request -- 
-            //  var opponentType = Controller.RequestInput() --->>>InitialiseOpponent
-            //  Validate Input: Try Parse opponentType to OpponentType enum --->>>InitialiseOpponent
-            //  var opponent = InitialiseOpponent() 
+            //  InitialiseOpponent() 
 
 
-            //  Request Match Length: "Specify Number of Games To Play?" -->>>InitialiseMatch -->>>User Input request
-            //  var numRounds = Controller.RequestInput() -->>>InitialiseMatch
-            //  Validate Input: Between 1 and 7 Games -->>>Refactor later -->>>InitialiseMatch
             //  Match = InitialiseMatch()
 
             /*Enter Match Loop*/
             //var matchResult = Match.Play() -->>>PlayMatch()
 
-            //  Display Match Result: -->>>Display Message to the User --MatchResult
+            //  Display Match Result: -->>>Display Message to the User --MatchResult -- DisplayMatchResult(matchResult)
             //  Controller.Output(matchResult.ToString());
 
             //  Prompt to ask if Player wants to play again - Do you want to play again? -->>>User Input request

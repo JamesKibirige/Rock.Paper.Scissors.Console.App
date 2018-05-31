@@ -63,20 +63,25 @@ namespace RockPaperScissors
         }
 
         /// <summary>
-        /// 
+        /// Request Valid Input from User, validates the users input and loops until user provides valid input based on the validation expression.
         /// </summary>
         /// <param name="validationMessage"></param>
         /// <param name="validationExpression"></param>
         /// <returns></returns>
         public string RequestValidInput(string validationMessage, string validationExpression)
         {
-            //do
-            //Request Valid Input from User
-            //Validate Users Input
-            //while input invalid
+            var userInput = "";
+            var isValid = false;
+            validationExpression = validationExpression.ToLower();
 
-            //return validated string
-            throw new NotImplementedException();
+            do
+            {
+                ConsoleAdapter.WriteLine(validationMessage);
+                userInput = ConsoleAdapter.ReadLine();
+                isValid = validationExpression.Contains(userInput);
+            } while (!isValid);
+
+            return userInput;
         }
     }
 }

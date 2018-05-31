@@ -59,9 +59,11 @@ namespace RockPaperScissors.Test
         public void RequestValidInput_RequestValidInputFromUser_UserEntersValidInput()
         {
             //Arrange
-            const string validationMessage = "Please Select Valid Input from Options";
-            const string validationExpression = "{Test1,Test2,Test3}";
+            const string validationMessage = "Please Select Valid Input from Options\n\n{Test1,Test2,Test3}";
+            const string validationExpression = "Test1,Test2,Test3";
             const string expectedresult = "test1";
+            MockConsoleAdapter.Setup(m => m.ReadLine()).Returns("test1");
+            ConsoleAdapter = MockConsoleAdapter.Object;
 
             //Act
             var result = ConsoleInteractionController.RequestValidInput(validationMessage, validationExpression);
@@ -69,15 +71,19 @@ namespace RockPaperScissors.Test
             //Assert
             Assert.IsNotNull(result);
             Assert.AreEqual(expectedresult, result);
+            MockConsoleAdapter.Verify(m => m.WriteLine(It.IsAny<string>()), Times.Once);
+            MockConsoleAdapter.Verify(m => m.ReadLine(), Times.Once);
         }
 
         [TestMethod]
         public void RequestValidInput_RequestValidInputFromUserUserEntersInvalidInput_LoopsUnitValidInputProvided()
         {
             //Arrange
-            const string validationMessage = "Please Select Valid Input from Options";
-            const string validationExpression = "{Test1,Test2,Test3}";
+            const string validationMessage = "Please Select Valid Input from Options\n\n{Test1,Test2,Test3}";
+            const string validationExpression = "Test1,Test2,Test3";
             const string expectedresult = "test2";
+            MockConsoleAdapter.SetupSequence(m => m.ReadLine()).Returns("test5").Returns("test2");
+            ConsoleAdapter = MockConsoleAdapter.Object;
 
             //Act
             var result = ConsoleInteractionController.RequestValidInput(validationMessage, validationExpression);
@@ -85,6 +91,8 @@ namespace RockPaperScissors.Test
             //Assert
             Assert.IsNotNull(result);
             Assert.AreEqual(expectedresult, result);
+            MockConsoleAdapter.Verify(m =>  m.WriteLine(It.IsAny<string>()),Times.Exactly(2));
+            MockConsoleAdapter.Verify(m => m.ReadLine(), Times.Exactly(2));
         }
     }
 }

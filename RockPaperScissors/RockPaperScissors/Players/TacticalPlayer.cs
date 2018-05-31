@@ -7,9 +7,9 @@ using RockPaperScissors.Interfaces;
 namespace RockPaperScissors.Players
 {
     /// <summary>
-    /// A Tactical Computer Player is a RandomComputerPlayer that selects moves tactically
+    /// A Tactical Computer Player is a RandomPlayer that selects moves tactically
     /// </summary>
-    public class TacticalComputerPlayer : RandomComputerPlayer
+    public class TacticalPlayer : RandomPlayer
     {
         /// <summary>
         /// A Tactical Computer Player remembers the history of moves that they have played during a match.
@@ -24,7 +24,7 @@ namespace RockPaperScissors.Players
         /// <param name="rules"></param>
         /// <param name="moves"></param>
         /// <param name="aRandomNumberGenerator"></param>
-        public TacticalComputerPlayer(string name, IGameRules rules, Stack<IMove> moves, Random aRandomNumberGenerator)
+        public TacticalPlayer(string name, IGameRules rules, Stack<IMove> moves, Random aRandomNumberGenerator)
         :base(name, rules, aRandomNumberGenerator)
         {
             Moves = moves;

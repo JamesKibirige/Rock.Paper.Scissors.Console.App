@@ -5,12 +5,12 @@ using RockPaperScissors.Interfaces;
 namespace RockPaperScissors.Players
 {
     /// <summary>
-    /// A Random Computer Player is a Player that selects Moves at Random.
+    /// A Random Player is a Player that selects Moves at Random.
     /// </summary>
-    public class RandomComputerPlayer : Player
+    public class RandomPlayer : Player
     {
         /// <summary>
-        /// Random number generator used by RandomComputerPlayer instances to select moves by random
+        /// Random number generator used by RandomPlayer instances to select moves by random
         /// </summary>
         public Random RandomNumberGenerator { get; set; }
 
@@ -20,7 +20,7 @@ namespace RockPaperScissors.Players
         /// <param name="name"></param>
         /// <param name="rules"></param>
         /// <param name="aRandomNumberGenerator"></param>
-        public RandomComputerPlayer(string name, IGameRules rules, Random aRandomNumberGenerator)
+        public RandomPlayer(string name, IGameRules rules, Random aRandomNumberGenerator)
         {
             Name = name;
             Rules = rules;

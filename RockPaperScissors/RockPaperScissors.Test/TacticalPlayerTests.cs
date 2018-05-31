@@ -10,7 +10,7 @@ using RockPaperScissors.Players;
 namespace RockPaperScissors.Test
 {
     [TestClass]
-    public class TacticalComputerPlayerTests
+    public class TacticalPlayerTests
     {
         /// <summary>
         /// The Player instance that we will be using to run our tests
@@ -28,7 +28,7 @@ namespace RockPaperScissors.Test
         public Mock<IGameRules> GameRulesMock { get; set; }
 
         /// <summary>
-        /// The stack of Moves that will be passed as a dependancy to our TacticalComputerPlayer instance
+        /// The stack of Moves that will be passed as a dependancy to our TacticalPlayer instance
         /// </summary>
         public Stack<IMove> Moves { get; set; }
 
@@ -40,7 +40,7 @@ namespace RockPaperScissors.Test
         [TestInitialize]
         public void SetUp()
         {
-            var playerName = "TacticalComputerPlayer";
+            const string playerName = "TacticalPlayer";
 
             GameRulesMock = new Mock<IGameRules>();
             GameRulesMock.Setup(m => m.Rules).Returns(new Dictionary<GameAction, List<GameAction>>()
@@ -71,7 +71,7 @@ namespace RockPaperScissors.Test
 
             Moves = new Stack<IMove>();
 
-            thePlayer = new TacticalComputerPlayer(playerName, GameRules, Moves,Rand);
+            thePlayer = new TacticalPlayer(playerName, GameRules, Moves,Rand);
         }
 
         [TestMethod]
