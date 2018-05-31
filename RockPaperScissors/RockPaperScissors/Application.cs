@@ -137,31 +137,30 @@ namespace RockPaperScissors
         {
             //var playagain = false;
 
+            /*Enter Application Loop*/
             //do
             //{
-            /*Enter Application Loop*/
             //  Display Title Splash to the User: "“Rock, Paper, Scissors by James Kibirige”" -->>>Display Message to the User -- resource file
             //  Controller.Output(Title);
 
-            //  InitialisePlayer()
-
-            //  InitialiseOpponent() 
-
-
+            //  var player1 = InitialisePlayer()
+            //  Players.Add(player1)
+            //  var player2 = InitialiseOpponent()
+            //  Players.Add(player2)
             //  Match = InitialiseMatch()
 
             /*Enter Match Loop*/
-            //var matchResult = Match.Play() -->>>PlayMatch()
+            //var matchResult = Match.Play()
 
-            //  Display Match Result: -->>>Display Message to the User --MatchResult -- DisplayMatchResult(matchResult)
+            //  Display Match Result
             //  Controller.Output(matchResult.ToString());
 
-            //  Prompt to ask if Player wants to play again - Do you want to play again? -->>>User Input request
-            //  playagain = Controller.RequestInput()
-            //  Validate Input
+            //  Prompt to ask if Player wants to play again - Do you want to play again?
+            //  var requestMessag = "Do want to Play Again?\n\n{Yes,No}"
+            //  var validationMessage = "Yes,Y,No,N"
+            //  userInput = Controller.RequestValidInput(validationMessage)
+            //  switch(userInput) -- If Yes playagain = true, If No playagain = false
 
-            //  If Yes return to Application initialisation and play again --playagain == true;
-            //  If No - End and close application --break loop --playagain == false
             // }while(playagain);
             throw new NotImplementedException();
         }
