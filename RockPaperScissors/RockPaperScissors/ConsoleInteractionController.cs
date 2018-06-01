@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text.RegularExpressions;
 using RockPaperScissors.Interfaces;
 
 namespace RockPaperScissors
@@ -63,11 +64,17 @@ namespace RockPaperScissors
         }
 
         /// <summary>
-        /// Request Valid Input from User, validates the users input and loops until user provides valid input based on the validation expression.
+        /// Request Valid Input from User, validates the users input using a custom validation expression and loops until user provides valid input.
         /// </summary>
-        /// <param name="validationMessage"></param>
-        /// <param name="validationExpression"></param>
-        /// <returns></returns>
+        /// <param name="validationMessage">
+        /// This is a string message used to request that the user enters Valid input and would typically specify the rules for valid input.
+        /// </param>
+        /// <param name="validationExpression">
+        /// This is a custom string expression that is used to constrain the input from the user. The user must provide input that is a substring of the validation expression.
+        /// </param>
+        /// <returns>
+        /// Returns a validated string from the User
+        /// </returns>
         public string RequestValidInput(string validationMessage, string validationExpression)
         {
             var userInput = "";
@@ -79,6 +86,30 @@ namespace RockPaperScissors
                 ConsoleAdapter.WriteLine(validationMessage);
                 userInput = ConsoleAdapter.ReadLine();
                 isValid = validationExpression.Contains(userInput);
+            } while (!isValid);
+
+            return userInput;
+        }
+
+        /// <summary>
+        /// Request Valid Input from User, validates the users input using a RegEx(Regular expression) and loops until user provides valid input.
+        /// </summary>
+        /// <param name="validationMessage">
+        /// </param>
+        /// <param name="rgx">
+        /// Regular expression used to parse and find matches in the users input for validation
+        /// </param>
+        /// <returns></returns>
+        public string RequestValidInput(string validationMessage, Regex rgx)
+        {
+            var userInput = "";
+            var isValid = false;
+
+            do
+            {
+                ConsoleAdapter.WriteLine(validationMessage);
+                userInput = ConsoleAdapter.ReadLine();
+                isValid = rgx.IsMatch(userInput);
             } while (!isValid);
 
             return userInput;

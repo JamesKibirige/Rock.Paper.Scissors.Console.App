@@ -1,4 +1,5 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using System.Text.RegularExpressions;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using RockPaperScissors.Interfaces;
 
@@ -92,6 +93,50 @@ namespace RockPaperScissors.Test
             Assert.IsNotNull(result);
             Assert.AreEqual(expectedresult, result);
             MockConsoleAdapter.Verify(m =>  m.WriteLine(It.IsAny<string>()),Times.Exactly(2));
+            MockConsoleAdapter.Verify(m => m.ReadLine(), Times.Exactly(2));
+        }
+
+        [TestMethod]
+        public void RequestValidInput_OverloadRegExRequestValidInputFromUser_UserEntersValidInput()
+        {
+            //Arrange
+            const string validationMessage = "Please Enter Your Name:\n\n{A-Z,a-z,1-9, }";
+            var rgx = new Regex(@"");
+            const string expectedresult = "James Kibirige";
+            MockConsoleAdapter.Setup(m => m.ReadLine()).Returns("James Kibirige");
+            ConsoleAdapter = MockConsoleAdapter.Object;
+
+            //Act
+            var result = ConsoleInteractionController.RequestValidInput(validationMessage, rgx);
+
+            //Assert
+            Assert.IsNotNull(result);
+            Assert.AreEqual(expectedresult, result);
+            MockConsoleAdapter.Verify(m => m.WriteLine(It.IsAny<string>()), Times.Once);
+            MockConsoleAdapter.Verify(m => m.ReadLine(), Times.Once);
+        }
+
+        [DataTestMethod]
+        [DataRow("+++++")]
+        [DataRow("&%hqyrt$5")]
+        [DataRow("Jamal&&&Edwards$$$")]
+        public void RequestValidInput_OverloadRegExRequestValidInputFromUserUserEntersInvalidInput_LoopsUnitValidInputProvided(string input)
+        {
+            //Arrange
+            const string validationMessage = "Please Enter Valid Name:\n\n{A-Z,a-z, }";
+            var rgx = new Regex(@"^[\p{L} \.'\-]+$");
+            const string expectedresult = "Jonita Laidley";
+
+            MockConsoleAdapter.SetupSequence(m => m.ReadLine()).Returns(input).Returns("Jonita Laidley");
+            ConsoleAdapter = MockConsoleAdapter.Object;
+
+            //Act
+            var result = ConsoleInteractionController.RequestValidInput(validationMessage, rgx);
+
+            //Assert
+            Assert.IsNotNull(result);
+            Assert.AreEqual(expectedresult, result);
+            MockConsoleAdapter.Verify(m => m.WriteLine(It.IsAny<string>()), Times.Exactly(2));
             MockConsoleAdapter.Verify(m => m.ReadLine(), Times.Exactly(2));
         }
     }
