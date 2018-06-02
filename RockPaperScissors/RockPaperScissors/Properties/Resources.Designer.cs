@@ -61,6 +61,24 @@ namespace RockPaperScissors.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to James Kibirige.
+        /// </summary>
+        internal static string ApplicationAuthor {
+            get {
+                return ResourceManager.GetString("ApplicationAuthor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Rock, Paper, Scissors.
+        /// </summary>
+        internal static string ApplicationTitle {
+            get {
+                return ResourceManager.GetString("ApplicationTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to .
         /// </summary>
         internal static string CommencementMessage {
@@ -75,6 +93,24 @@ namespace RockPaperScissors.Properties {
         internal static string RequestMoveMessage {
             get {
                 return ResourceManager.GetString("RequestMoveMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to @&quot;^[0-9]+$&quot;.
+        /// </summary>
+        internal static string ValidateIntegerRegEx {
+            get {
+                return ResourceManager.GetString("ValidateIntegerRegEx", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to @&quot;^[\p{L} \.&apos;\-]+$&quot;.
+        /// </summary>
+        internal static string ValidateNamesRegEx {
+            get {
+                return ResourceManager.GetString("ValidateNamesRegEx", resourceCulture);
             }
         }
         

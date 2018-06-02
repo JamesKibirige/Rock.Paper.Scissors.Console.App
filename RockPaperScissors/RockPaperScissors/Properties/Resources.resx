@@ -117,11 +117,23 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="ApplicationAuthor" xml:space="preserve">
+    <value>James Kibirige</value>
+  </data>
+  <data name="ApplicationTitle" xml:space="preserve">
+    <value>Rock, Paper, Scissors</value>
+  </data>
   <data name="CommencementMessage" xml:space="preserve">
     <value />
   </data>
   <data name="RequestMoveMessage" xml:space="preserve">
     <value />
+  </data>
+  <data name="ValidateIntegerRegEx" xml:space="preserve">
+    <value>@"^[0-9]+$"</value>
+  </data>
+  <data name="ValidateNamesRegEx" xml:space="preserve">
+    <value>@"^[\p{L} \.'\-]+$"</value>
   </data>
   <data name="ValidationMessage" xml:space="preserve">
     <value />

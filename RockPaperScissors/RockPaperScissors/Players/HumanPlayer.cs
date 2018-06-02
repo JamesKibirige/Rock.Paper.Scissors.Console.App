@@ -39,14 +39,14 @@ namespace RockPaperScissors.Players
 
             do
             {
-                var promptInputMessage = string.Format("\nPlayer <{0}>\nSelect a Move from the possible choices:\n{{{1}}}", Name, possibleActions);
+                var promptInputMessage = string.Format("Player <{0}>\nSelect a Move from the possible choices:\n{{{1}}}", Name, possibleActions);
                 var userInput = Controller.RequestInput(promptInputMessage).ToString();//Request input from User 
 
                 validInput = Enum.TryParse<GameAction>(userInput,out playerAction);
 
                 if (!validInput)//Output Message telling the user that their input was invalid
                 {
-                    var validationMessage = string.Format("\nInvalid Input: {0}\nPlease provide a Valid Action\nThe set of acceptable Actions are as follows: {{{1}}}", userInput, possibleActions);
+                    var validationMessage = string.Format("Invalid Input: {0}\nPlease provide a Valid Action\nThe set of acceptable Actions are as follows: {{{1}}}", userInput, possibleActions);
                     Controller.Output(validationMessage);
                 }
             } while (!validInput);//Loop while users input is invalid

@@ -56,14 +56,14 @@ namespace RockPaperScissors.Test
             //Mock Set Up for Player with Valid Move: James Kibirige
             var player1Name = "James Kibirige";
             var validuserInput = "Rock";
-            var promptInputMessagePlayer1 = string.Format("\nPlayer <{0}>\nSelect a Move from the possible choices:\n{{{1}}}", player1Name, possibleActions);
+            var promptInputMessagePlayer1 = string.Format("Player <{0}>\nSelect a Move from the possible choices:\n{{{1}}}", player1Name, possibleActions);
 
             //Mock Set Up for Player with Invalid Move: Jonita Laidley
             var player2Name = "Jonita Laidley";
             var invaliduserInput = "Lizard";
             var validuserInput2 = "Paper";
-            var promptInputMessagePlayer2 = string.Format("\nPlayer <{0}>\nSelect a Move from the possible choices:\n{{{1}}}", player2Name, possibleActions);
-            var validationMessage = string.Format("\nInvalid Input: {0}\nPlease provide a Valid Action\nThe set of acceptable Actions are as follows: {{{1}}}", invaliduserInput, possibleActions);
+            var promptInputMessagePlayer2 = string.Format("Player <{0}>\nSelect a Move from the possible choices:\n{{{1}}}", player2Name, possibleActions);
+            var validationMessage = string.Format("Invalid Input: {0}\nPlease provide a Valid Action\nThe set of acceptable Actions are as follows: {{{1}}}", invaliduserInput, possibleActions);
 
             UiControllerMock = new Mock<IUserInteraction>();
             UiControllerMock.Setup(m => m.RequestInput(promptInputMessagePlayer1)).Returns(validuserInput);
@@ -99,8 +99,8 @@ namespace RockPaperScissors.Test
             var invaliduserInput = "Lizard";
             var possibleActions = "Rock, Paper, Scissors";
 
-            var promptInputMessage = string.Format("\nPlayer <{0}>\nSelect a Move from the possible choices:\n{{{1}}}", playerName, possibleActions);
-            var validationMessage = string.Format("\nInvalid Input: {0}\nPlease provide a Valid Action\nThe set of acceptable Actions are as follows: {{{1}}}", invaliduserInput, possibleActions);
+            var promptInputMessage = string.Format("Player <{0}>\nSelect a Move from the possible choices:\n{{{1}}}", playerName, possibleActions);
+            var validationMessage = string.Format("Invalid Input: {0}\nPlease provide a Valid Action\nThe set of acceptable Actions are as follows: {{{1}}}", invaliduserInput, possibleActions);
 
             //Act
             var result = HumanPlayer.SelectMove();
