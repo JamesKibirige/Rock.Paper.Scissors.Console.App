@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Text.RegularExpressions;
 using RockPaperScissors.Interfaces;
 
@@ -79,13 +80,12 @@ namespace RockPaperScissors
         {
             var userInput = "";
             var isValid = false;
-            validationExpression = validationExpression.ToLower();
 
             do
             {
                 ConsoleAdapter.WriteLine(validationMessage);
                 userInput = ConsoleAdapter.ReadLine();
-                isValid = validationExpression.Contains(userInput);
+                isValid = validationExpression.Split(",").ToList().Contains(userInput);
             } while (!isValid);
 
             return userInput;

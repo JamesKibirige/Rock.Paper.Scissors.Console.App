@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Reflection.Metadata;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -138,7 +139,7 @@ namespace RockPaperScissors
             var opponentType = (string)InteractionController.RequestInput(requestMessage);
             
             // Validate Input
-            var isValid = opponentTypeOptions.Contains(opponentType);
+            var isValid = opponentTypeOptions.Split(",").ToList().Contains(opponentType); ;
             if (!isValid)
             {
                 var validationrequest = $"Please provide a Valid choice – The acceptable Opponent Types are as follows:\n\n{opponentTypeOptions}";
@@ -248,12 +249,12 @@ namespace RockPaperScissors
 
                 DisplayMatchResult();
 
-                var yesNoOptions = "Yes,Y,No,N";
+                var yesNoOptions = "Yes,No";
                 var playAgainRequestMessage = $"Do want to Play Again?\n\n{{{yesNoOptions}}}";
 
                 //Does user want to play again?
                 var userPlayAgainInput = (string)InteractionController.RequestInput(playAgainRequestMessage);
-                var isValid = yesNoOptions.Contains(userPlayAgainInput);
+                var isValid = yesNoOptions.Split(",").ToList().Contains(userPlayAgainInput);
                 if (!isValid)
                 {
                     var validationrequest = $"Please provide a Valid choice – The acceptable options are as follows:\n\n{yesNoOptions}";
@@ -265,6 +266,12 @@ namespace RockPaperScissors
                 {
                     case YesNo.Yes:
                         playagain = true;
+
+                        //Reset instance variables for second play through
+                        Players.Clear();
+                        Match = null;
+                        MatchResult = null;
+                        Score.Scores.Clear();
                         break;
                     case YesNo.No:
                     default:

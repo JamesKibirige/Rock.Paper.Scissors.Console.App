@@ -62,8 +62,8 @@ namespace RockPaperScissors.Test
             //Arrange
             const string validationMessage = "Please Select Valid Input from Options\n\n{Test1,Test2,Test3}";
             const string validationExpression = "Test1,Test2,Test3";
-            const string expectedresult = "test1";
-            MockConsoleAdapter.Setup(m => m.ReadLine()).Returns("test1");
+            const string expectedresult = "Test1";
+            MockConsoleAdapter.Setup(m => m.ReadLine()).Returns("Test1");
             ConsoleAdapter = MockConsoleAdapter.Object;
 
             //Act
@@ -82,8 +82,8 @@ namespace RockPaperScissors.Test
             //Arrange
             const string validationMessage = "Please Select Valid Input from Options\n\n{Test1,Test2,Test3}";
             const string validationExpression = "Test1,Test2,Test3";
-            const string expectedresult = "test2";
-            MockConsoleAdapter.SetupSequence(m => m.ReadLine()).Returns("test5").Returns("test2");
+            const string expectedresult = "Test2";
+            MockConsoleAdapter.SetupSequence(m => m.ReadLine()).Returns("test5").Returns("Test2");
             ConsoleAdapter = MockConsoleAdapter.Object;
 
             //Act
