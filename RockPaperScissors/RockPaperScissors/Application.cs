@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection.Metadata;
-using System.Text;
-using System.Text.RegularExpressions;
-using RockPaperScissors.ContestResults;
-using RockPaperScissors.Enums;
+﻿using RockPaperScissors.Enums;
 using RockPaperScissors.Interfaces;
 using RockPaperScissors.Players;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text.RegularExpressions;
 
 namespace RockPaperScissors
 {

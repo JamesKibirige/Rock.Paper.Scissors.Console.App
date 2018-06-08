@@ -1,10 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using RockPaperScissors.Enums;
-using RockPaperScissors.Interfaces;
+﻿using RockPaperScissors.Enums;
 using RockPaperScissors.Properties;
 using RockPaperScissors.RegistryDSL;
 using StructureMap;
+using System.Collections.Generic;
 
 namespace RockPaperScissors.CompositionRoot
 {

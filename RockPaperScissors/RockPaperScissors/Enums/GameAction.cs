@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace RockPaperScissors.Enums
+﻿namespace RockPaperScissors.Enums
 {
     /// <summary>
     /// Enum encapsulating the choice of Actions that players can play when selecting moves in Rock, Paper, Scissors

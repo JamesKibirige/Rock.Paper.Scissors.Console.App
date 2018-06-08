@@ -1,10 +1,9 @@
-﻿using RockPaperScissors.Enums;
+﻿using RockPaperScissors.ContestResults;
+using RockPaperScissors.Enums;
 using RockPaperScissors.Interfaces;
-using System;
+using RockPaperScissors.Players;
 using System.Collections.Generic;
 using System.Linq;
-using RockPaperScissors.ContestResults;
-using RockPaperScissors.Players;
 
 namespace RockPaperScissors
 {

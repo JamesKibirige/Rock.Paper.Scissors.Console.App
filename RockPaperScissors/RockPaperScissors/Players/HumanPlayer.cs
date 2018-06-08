@@ -1,6 +1,7 @@
-﻿using System;
-using RockPaperScissors.Enums;
+﻿using RockPaperScissors.Enums;
 using RockPaperScissors.Interfaces;
+using System;
+using System.Linq;
 
 namespace RockPaperScissors.Players
 {
@@ -35,14 +36,15 @@ namespace RockPaperScissors.Players
         {
             bool validInput = false;
             GameAction playerAction;
-            var possibleActions = string.Join(",", Rules.PossibleGameActions());//String literal listing possible game actions
+            var possibleActionsList = Rules.PossibleGameActions().Select(a => a.ToString()).ToList();
+            var possibleActions = string.Join(",", possibleActionsList);//String literal listing possible game actions
 
             do
             {
                 var promptInputMessage = string.Format("Player <{0}>\nSelect a Move from the possible choices:\n{{{1}}}", Name, possibleActions);
                 var userInput = Controller.RequestInput(promptInputMessage).ToString();//Request input from User 
 
-                validInput = Enum.TryParse<GameAction>(userInput,out playerAction);
+                validInput = Enum.TryParse<GameAction>(userInput,out playerAction) && possibleActionsList.Contains(userInput);
 
                 if (!validInput)//Output Message telling the user that their input was invalid
                 {
